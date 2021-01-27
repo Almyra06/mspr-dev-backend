@@ -155,6 +155,6 @@ class __TwigTemplate_b9d0cb94e8187a8e9c93643cdb499346bf42d7531dd966a7450cd3208a7
 {% block panel %}
     {{ render(path('_profiler_router', { token: token })) }}
 {% endblock %}
-", "@WebProfiler/Collector/router.html.twig", "D:\\Cours\\MSPR\\BACKFRONT\\LiveEvents\\LiveEventsV2\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\router.html.twig");
+", "@WebProfiler/Collector/router.html.twig", "D:\\Cours\\MSPR\\BACKFRONT\\LiveEvents\\TEST\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\router.html.twig");
     }
 }
