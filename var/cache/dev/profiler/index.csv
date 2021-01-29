@@ -66,3 +66,6 @@ f3aeb6,::1,GET,http://localhost:8000/accueil,1611849117,,200
 5ffca5,::1,GET,http://localhost:8000/,1611909419,,200
 58bc47,::1,GET,http://localhost:8000/favicon.ico,1611909421,aa87fa,404
 aa87fa,::1,GET,http://localhost:8000/favicon.ico,1611909421,,404
+57977e,127.0.0.1,GET,http://127.0.0.1:8000/,1611911975,,200
+749af5,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1611911978,7d6766,404
+7d6766,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1611911978,,404

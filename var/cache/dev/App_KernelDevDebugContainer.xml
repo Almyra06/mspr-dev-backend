@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</parameter>
+    <parameter key="kernel.project_dir">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev</parameter>
-    <parameter key="kernel.cache_dir">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\log</parameter>
+    <parameter key="kernel.build_dir">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="TwigBundle">Symfony\Bundle\TwigBundle\TwigBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="MakerBundle">Symfony\Bundle\MakerBundle\MakerBundle</parameter>
+      <parameter key="DoctrineMigrationsBundle">Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\symfony\framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\symfony\twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\vendor\symfony\web-profiler-bundle</parameter>
+        <parameter key="path">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\symfony\web-profiler-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\doctrine\doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\symfony\maker-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
+      </parameter>
+      <parameter key="DoctrineMigrationsBundle" type="collection">
+        <parameter key="path">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -61,7 +66,7 @@
     <parameter key="kernel.default_locale">en</parameter>
     <parameter key="kernel.error_controller">error_controller</parameter>
     <parameter key="debug.file_link_format">null</parameter>
-    <parameter key="cache.prefix.seed">_D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend.App_KernelDevDebugContainer</parameter>
+    <parameter key="cache.prefix.seed">_D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cache_limiter" type="string">0</parameter>
@@ -70,13 +75,13 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -86,7 +91,7 @@
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend/templates</parameter>
+    <parameter key="twig.default_path">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="doctrine.dbal.logger.chain.class">Doctrine\DBAL\Logging\LoggerChain</parameter>
@@ -154,8 +159,10 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
+    <parameter key="doctrine.migrations.preferred_em">null</parameter>
+    <parameter key="doctrine.migrations.preferred_connection">null</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -228,6 +235,30 @@
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\BoutiqueController"/>
       </call>
     </service>
+    <service id="App\Repository\ArtisteRepository" class="App\Repository\ArtisteRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\BilletRepository" class="App\Repository\BilletRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ConcertRepository" class="App\Repository\ConcertRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\FestivalierRepository" class="App\Repository\FestivalierRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\GroupeRepository" class="App\Repository\GroupeRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ProgrammeRepository" class="App\Repository\ProgrammeRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
       <tag name="kernel.event_subscriber"/>
@@ -290,7 +321,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/http_cache</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -300,7 +331,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <tag name="container.private" package="symfony/framework-bundle" version="5.2"/>
@@ -428,7 +459,7 @@
       </argument>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
       <argument type="service">
         <service>
           <argument type="service" id="request_stack"/>
@@ -458,7 +489,7 @@
       <tag name="console.command" command="assets:install"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="filesystem"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -685,7 +716,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/pools</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -714,7 +745,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/pools</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -859,14 +890,14 @@
       <deprecated package="symfony/framework-bundle" version="5.1">The "%service_id%" service is deprecated, use "$session-&gt;getAttributeBag()" instead.</deprecated>
     </service>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/sessions</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-          <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/sessions</argument>
+          <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/sessions</argument>
         </service>
       </argument>
     </service>
@@ -927,7 +958,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
-      <argument>file:D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/profiler</argument>
+      <argument>file:D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -973,7 +1004,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/App_KernelDevDebugContainer</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -1052,7 +1083,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
       <argument type="service" id="debug.file_link_formatter.url_format"/>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
@@ -1407,7 +1438,7 @@
       <argument type="service" id=".service_locator.WOytlHA.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev</argument>
+        <argument key="cache_dir">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -1446,7 +1477,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -1505,14 +1536,14 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/annotations.php</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider">
       <argument type="service">
         <service class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-          <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/annotations.php</argument>
+          <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/annotations.php</argument>
           <argument type="service" id="cache.annotations"/>
           <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
         </service>
@@ -1520,7 +1551,7 @@
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
       <tag name="container.env_var_loader"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
       <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
     </service>
     <service id="secrets.decryption_key" class="Symfony\Component\String\LazyString">
@@ -1529,7 +1560,7 @@
       <factory class="Symfony\Component\String\LazyString" method="fromCallable"/>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend/.env.dev.local</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend/.env.dev.local</argument>
     </service>
     <service id="twig" class="Twig\Environment" public="true">
       <tag name="container.preload" class="Twig\Cache\FilesystemCache"/>
@@ -1544,7 +1575,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/twig</argument>
+        <argument key="cache">D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -1605,7 +1636,7 @@
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator">
       <argument type="service" id="kernel"/>
       <argument type="collection"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend/templates</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer">
       <tag name="kernel.cache_warmer"/>
@@ -1616,25 +1647,25 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
       <call method="addPath">
-        <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend/templates</argument>
+        <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend/templates</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader"/>
@@ -1656,7 +1687,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension">
@@ -1714,9 +1745,9 @@
       <tag name="console.command" command="debug:twig"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="twig"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend/templates</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend/templates</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -1736,7 +1767,7 @@
       <argument type="service" id="twig"/>
       <argument>%data_collector.templates%</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -1924,7 +1955,7 @@
         </service>
       </argument>
     </service>
-    <service id=".1_ServiceLocator~tRqDj9B" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".1_ServiceLocator~ST38bCp" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer">
@@ -1944,7 +1975,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.Xbsa8iG"/>
+      <argument type="service" id=".service_locator.exzQk_l"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -2100,7 +2131,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -2130,7 +2161,7 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\src\Entity</argument>
+        <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\src\Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
@@ -2185,8 +2216,8 @@
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
       <argument type="service" id="maker.file_link_formatter"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend/templates</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder">
       <argument>App</argument>
@@ -2260,7 +2291,7 @@
       <tag name="maker.command"/>
       <argument type="service" id="maker.file_manager"/>
       <argument type="service" id="maker.doctrine_helper"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
       <argument type="service" id="maker.generator"/>
       <argument type="service" id="maker.entity_class_generator"/>
     </service>
@@ -2327,14 +2358,172 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration">
       <tag name="maker.command"/>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend</argument>
     </service>
+    <service id="doctrine.migrations.dependency_factory" class="Doctrine\Migrations\DependencyFactory">
+      <argument type="service" id="doctrine.migrations.configuration_loader"/>
+      <argument type="service" id="doctrine.migrations.em_loader"/>
+      <argument type="service" id="logger" on-invalid="null"/>
+      <factory class="Doctrine\Migrations\DependencyFactory" method="fromEntityManager"/>
+    </service>
+    <service id="doctrine.migrations.configuration_loader" class="Doctrine\Migrations\Configuration\Migration\ExistingConfiguration">
+      <argument type="service" id="doctrine.migrations.configuration"/>
+    </service>
+    <service id="doctrine.migrations.connection_loader" class="Doctrine\Migrations\Configuration\Connection\ExistingConnection"/>
+    <service id="doctrine.migrations.em_loader" class="Doctrine\Migrations\Configuration\EntityManager\ExistingEntityManager">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+    </service>
+    <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration">
+      <call method="addMigrationsDirectory">
+        <argument>DoctrineMigrations</argument>
+        <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend/migrations</argument>
+      </call>
+      <call method="setAllOrNothing">
+        <argument>false</argument>
+      </call>
+      <call method="setCheckDatabasePlatform">
+        <argument>true</argument>
+      </call>
+      <call method="setMetadataStorageConfiguration">
+        <argument type="service" id="doctrine.migrations.storage.table_storage"/>
+      </call>
+    </service>
+    <service id="doctrine_migrations.diff_command" class="Doctrine\Migrations\Tools\Console\Command\DiffCommand">
+      <tag name="console.command" command="doctrine:migrations:diff"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:diff</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:diff</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.sync_metadata_command" class="Doctrine\Migrations\Tools\Console\Command\SyncMetadataCommand">
+      <tag name="console.command" command="doctrine:migrations:sync-metadata-storage"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:sync-metadata-storage</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:sync-metadata-storage</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.versions_command" class="Doctrine\Migrations\Tools\Console\Command\ListCommand">
+      <tag name="console.command" command="doctrine:migrations:list"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:versions</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:list</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.current_command" class="Doctrine\Migrations\Tools\Console\Command\CurrentCommand">
+      <tag name="console.command" command="doctrine:migrations:current"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:current</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:current</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.dump_schema_command" class="Doctrine\Migrations\Tools\Console\Command\DumpSchemaCommand">
+      <tag name="console.command" command="doctrine:migrations:dump-schema"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:dump-schema</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:dump-schema</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.execute_command" class="Doctrine\Migrations\Tools\Console\Command\ExecuteCommand">
+      <tag name="console.command" command="doctrine:migrations:execute"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:execute</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:execute</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.generate_command" class="Doctrine\Migrations\Tools\Console\Command\GenerateCommand">
+      <tag name="console.command" command="doctrine:migrations:generate"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:generate</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:generate</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.latest_command" class="Doctrine\Migrations\Tools\Console\Command\LatestCommand">
+      <tag name="console.command" command="doctrine:migrations:latest"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:latest</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:latest</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.migrate_command" class="Doctrine\Migrations\Tools\Console\Command\MigrateCommand">
+      <tag name="console.command" command="doctrine:migrations:migrate"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:migrate</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:migrate</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.rollup_command" class="Doctrine\Migrations\Tools\Console\Command\RollupCommand">
+      <tag name="console.command" command="doctrine:migrations:rollup"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:rollup</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:rollup</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.status_command" class="Doctrine\Migrations\Tools\Console\Command\StatusCommand">
+      <tag name="console.command" command="doctrine:migrations:status"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:status</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:status</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.up_to_date_command" class="Doctrine\Migrations\Tools\Console\Command\UpToDateCommand">
+      <tag name="console.command" command="doctrine:migrations:up-to-date"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:up-to-date</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:up-to-date</argument>
+      </call>
+    </service>
+    <service id="doctrine_migrations.version_command" class="Doctrine\Migrations\Tools\Console\Command\VersionCommand">
+      <tag name="console.command" command="doctrine:migrations:version"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.migrations.dependency_factory"/>
+      <argument>doctrine:migrations:version</argument>
+      <call method="setName">
+        <argument>doctrine:migrations:version</argument>
+      </call>
+    </service>
+    <service id="doctrine.migrations.storage.table_storage" class="Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AccueilController" class="App\Controller\AccueilController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AccueilController" class="App\Controller\AccueilController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AccueilController" class="App\Controller\AccueilController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BoutiqueController" class="App\Controller\BoutiqueController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BoutiqueController" class="App\Controller\BoutiqueController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\BoutiqueController" class="App\Controller\BoutiqueController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ArtisteRepository" class="App\Repository\ArtisteRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ArtisteRepository" class="App\Repository\ArtisteRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BilletRepository" class="App\Repository\BilletRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\BilletRepository" class="App\Repository\BilletRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ConcertRepository" class="App\Repository\ConcertRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ConcertRepository" class="App\Repository\ConcertRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\FestivalierRepository" class="App\Repository\FestivalierRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\FestivalierRepository" class="App\Repository\FestivalierRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\GroupeRepository" class="App\Repository\GroupeRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\GroupeRepository" class="App\Repository\GroupeRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProgrammeRepository" class="App\Repository\ProgrammeRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProgrammeRepository" class="App\Repository\ProgrammeRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.Kbr2i2X" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -2650,9 +2839,16 @@
         <argument key="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber" type="service" id="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.Xbsa8iG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.exzQk_l" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="App\Repository\ArtisteRepository" type="service" id="App\Repository\ArtisteRepository"/>
+        <argument key="App\Repository\BilletRepository" type="service" id="App\Repository\BilletRepository"/>
+        <argument key="App\Repository\ConcertRepository" type="service" id="App\Repository\ConcertRepository"/>
+        <argument key="App\Repository\FestivalierRepository" type="service" id="App\Repository\FestivalierRepository"/>
+        <argument key="App\Repository\GroupeRepository" type="service" id="App\Repository\GroupeRepository"/>
+        <argument key="App\Repository\ProgrammeRepository" type="service" id="App\Repository\ProgrammeRepository"/>
+      </argument>
     </service>
     <service id="logger" class="Symfony\Component\HttpKernel\Log\Logger"/>
     <service id=".service_locator.5nX7ca3" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -2770,7 +2966,7 @@
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
-      <argument type="service" id=".service_locator.eu9CZO9"/>
+      <argument type="service" id=".service_locator.pdeXA5m"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -2817,6 +3013,19 @@
         <argument key="doctrine:schema:update">doctrine.schema_update_command</argument>
         <argument key="doctrine:schema:validate">doctrine.schema_validate_command</argument>
         <argument key="doctrine:mapping:import">doctrine.mapping_import_command</argument>
+        <argument key="doctrine:migrations:diff">doctrine_migrations.diff_command</argument>
+        <argument key="doctrine:migrations:sync-metadata-storage">doctrine_migrations.sync_metadata_command</argument>
+        <argument key="doctrine:migrations:list">doctrine_migrations.versions_command</argument>
+        <argument key="doctrine:migrations:current">doctrine_migrations.current_command</argument>
+        <argument key="doctrine:migrations:dump-schema">doctrine_migrations.dump_schema_command</argument>
+        <argument key="doctrine:migrations:execute">doctrine_migrations.execute_command</argument>
+        <argument key="doctrine:migrations:generate">doctrine_migrations.generate_command</argument>
+        <argument key="doctrine:migrations:latest">doctrine_migrations.latest_command</argument>
+        <argument key="doctrine:migrations:migrate">doctrine_migrations.migrate_command</argument>
+        <argument key="doctrine:migrations:rollup">doctrine_migrations.rollup_command</argument>
+        <argument key="doctrine:migrations:status">doctrine_migrations.status_command</argument>
+        <argument key="doctrine:migrations:up-to-date">doctrine_migrations.up_to_date_command</argument>
+        <argument key="doctrine:migrations:version">doctrine_migrations.version_command</argument>
         <argument key="make:auth">maker.auto_command.make_auth</argument>
         <argument key="make:command">maker.auto_command.make_command</argument>
         <argument key="make:controller">maker.auto_command.make_controller</argument>
@@ -2841,7 +3050,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-    <service id=".service_locator.eu9CZO9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.pdeXA5m" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Doctrine\DBAL\Tools\Console\Command\RunSqlCommand" type="service" id="Doctrine\DBAL\Tools\Console\Command\RunSqlCommand"/>
@@ -2887,6 +3096,19 @@
         <argument key="doctrine.schema_drop_command" type="service" id="doctrine.schema_drop_command"/>
         <argument key="doctrine.schema_update_command" type="service" id="doctrine.schema_update_command"/>
         <argument key="doctrine.schema_validate_command" type="service" id="doctrine.schema_validate_command"/>
+        <argument key="doctrine_migrations.current_command" type="service" id="doctrine_migrations.current_command"/>
+        <argument key="doctrine_migrations.diff_command" type="service" id="doctrine_migrations.diff_command"/>
+        <argument key="doctrine_migrations.dump_schema_command" type="service" id="doctrine_migrations.dump_schema_command"/>
+        <argument key="doctrine_migrations.execute_command" type="service" id="doctrine_migrations.execute_command"/>
+        <argument key="doctrine_migrations.generate_command" type="service" id="doctrine_migrations.generate_command"/>
+        <argument key="doctrine_migrations.latest_command" type="service" id="doctrine_migrations.latest_command"/>
+        <argument key="doctrine_migrations.migrate_command" type="service" id="doctrine_migrations.migrate_command"/>
+        <argument key="doctrine_migrations.rollup_command" type="service" id="doctrine_migrations.rollup_command"/>
+        <argument key="doctrine_migrations.status_command" type="service" id="doctrine_migrations.status_command"/>
+        <argument key="doctrine_migrations.sync_metadata_command" type="service" id="doctrine_migrations.sync_metadata_command"/>
+        <argument key="doctrine_migrations.up_to_date_command" type="service" id="doctrine_migrations.up_to_date_command"/>
+        <argument key="doctrine_migrations.version_command" type="service" id="doctrine_migrations.version_command"/>
+        <argument key="doctrine_migrations.versions_command" type="service" id="doctrine_migrations.versions_command"/>
         <argument key="maker.auto_command.make_auth" type="service" id="maker.auto_command.make_auth"/>
         <argument key="maker.auto_command.make_command" type="service" id="maker.auto_command.make_command"/>
         <argument key="maker.auto_command.make_controller" type="service" id="maker.auto_command.make_controller"/>
@@ -2914,51 +3136,51 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>KAyLGtPMDZ</argument>
+      <argument>OSa356XjUR</argument>
       <argument>0</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/pools</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>+jyjBdYbFb</argument>
+      <argument>IjdTWgxhjQ</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/pools</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>mM4lcqb3ln</argument>
+      <argument>t72tU-jAcx</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/pools</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>B6t9av3eqw</argument>
+      <argument>FV9sbn6usz</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/pools</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>DAFiOUvCZ+</argument>
+      <argument>1zONMXR0L4</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/pools</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>3pAg+QvrFt</argument>
+      <argument>XbTDD4mzxV</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>D:\vie perso\ecole\wis\mspr back et front\projet\mspr-dev-backend\var\cache\dev/pools</argument>
+      <argument>D:\Cours\MSPR\BACKFRONT\LiveEvents\LiveEventsV4\mspr-dev-backend\var\cache\dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -3035,6 +3257,7 @@
     <service id="doctrine.orm.default_result_cache" alias="doctrine.orm.cache.provider.cache.doctrine.orm.default.result"/>
     <service id="doctrine.orm.default_query_cache" alias="doctrine.orm.cache.provider.cache.doctrine.orm.default.query"/>
     <service id="doctrine.orm.default_entity_manager.event_manager" alias="doctrine.dbal.default_connection.event_manager"/>
+    <service id="doctrine.migrations.metadata_storage" alias="doctrine.migrations.storage.table_storage"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
     <service id="argument_resolver.controller_locator" alias=".service_locator.YxNo8ZP"/>
