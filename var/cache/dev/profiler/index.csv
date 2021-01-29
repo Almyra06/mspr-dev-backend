@@ -1,2 +1,9 @@
 fbd3af,::1,GET,http://localhost:8000/,1611938554,f124bc,500
 f124bc,::1,GET,http://localhost:8000/,1611938554,,500
+bc25a6,::1,GET,http://localhost:8000/,1611938762,ee7f90,500
+ee7f90,::1,GET,http://localhost:8000/,1611938762,,500
+2a70c2,::1,GET,http://localhost:8000/,1611938799,7fab01,500
+7fab01,::1,GET,http://localhost:8000/,1611938799,,500
+ca32c2,::1,GET,http://localhost:8000/,1611938813,,200
+b782d0,::1,GET,http://localhost:8000/css/bootstrap.css,1611938813,424b5a,404
+424b5a,::1,GET,http://localhost:8000/css/bootstrap.css,1611938813,,404
