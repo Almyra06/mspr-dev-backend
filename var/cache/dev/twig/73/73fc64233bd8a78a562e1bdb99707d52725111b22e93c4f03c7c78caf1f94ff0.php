@@ -471,6 +471,6 @@ class __TwigTemplate_10d35537b178d1e0877464bf624b7d4bfccb727f8e0a7745a1a637ab367
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\mathi\\Documents\\mspr-dev-backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "D:\\vie perso\\ecole\\wis\\mspr back et front\\projet\\mspr-dev-backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
     }
 }

@@ -482,6 +482,6 @@ class __TwigTemplate_22140e73d66bd00455f5fe5d7593137bae9fd3f14b163b1977fec2d0eb5
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "C:\\Users\\mathi\\Documents\\mspr-dev-backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "D:\\vie perso\\ecole\\wis\\mspr back et front\\projet\\mspr-dev-backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\events.html.twig");
     }
 }

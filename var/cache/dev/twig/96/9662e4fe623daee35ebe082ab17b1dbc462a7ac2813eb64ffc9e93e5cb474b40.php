@@ -168,6 +168,6 @@ class __TwigTemplate_716d79ffe7171e87d0c1d078079b6118a34c15f3e1fd71ccfc9fdf67860
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}
-", "@WebProfiler/Collector/ajax.html.twig", "C:\\Users\\mathi\\Documents\\mspr-dev-backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\ajax.html.twig");
+", "@WebProfiler/Collector/ajax.html.twig", "D:\\vie perso\\ecole\\wis\\mspr back et front\\projet\\mspr-dev-backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\ajax.html.twig");
     }
 }
