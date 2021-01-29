@@ -28,25 +28,34 @@ class AccueilController extends AbstractController
             'id'=>1,
             'date_debut'=>'12/02/2021',
             'horraire_debut'=>'13h45',
+            'horraire_fin'=>'15h15',
             'duree' => '1h30',
             'emplacement'=>'scene principale',
-            'group_id'=>3
+            'group_id'=>[
+                    'nom'=>'Jull'
+                ]
             ],
             [
             'id'=>2,
             'date_debut'=>'12/02/2021',
             'horraire_debut'=>'13h45',
-            'duree' => '2h30',
+            'horraire_fin'=>'15h45',
+            'duree' => '2h',
             'emplacement'=>'scene secondaire',
-            'group_id'=>5
+            'group_id'=>[
+                'nom'=>'wenjdege'
+            ]
             ],
             [
             'id'=>3,
             'date_debut'=>'12/02/2021',
             'horraire_debut'=>'15h15',
+            'horraire_fin'=>'16h15',
             'duree' => '1h',
             'emplacement'=>'scene principale',
-            'group_id'=>2
+            'group_id'=>[
+                'nom'=>'Yanakamoura'
+            ]
             ]
         ];
         return $programme;
