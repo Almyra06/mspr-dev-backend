@@ -43,9 +43,10 @@ class Concert
     private $emplacement;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity=Groupe::class, inversedBy="concerts")
      */
-    private $id_groupe;
+    private $groupe;
+
 
     public function getId(): ?int
     {
@@ -112,14 +113,14 @@ class Concert
         return $this;
     }
 
-    public function getIdGroupe(): ?int
+    public function getGroupe(): ?Groupe
     {
-        return $this->id_groupe;
+        return $this->groupe;
     }
 
-    public function setIdGroupe(int $id_groupe): self
+    public function setGroupe(?Groupe $groupe): self
     {
-        $this->id_groupe = $id_groupe;
+        $this->groupe = $groupe;
 
         return $this;
     }
