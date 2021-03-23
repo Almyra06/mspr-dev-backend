@@ -1,6 +1,27 @@
 live_events_accueil:
     path: /
     controller: App\Controller\AccueilController::index
+    
+live_events_accueil_admin:
+    path: /admin/
+    controller: App\Controller\AccueilController::adminIndex
+
+live_events_accueil_admin_new_concert:
+    path: /admin/add/concert/
+    methods: [GET, POST]
+    controller: App\Controller\AccueilController::newConcert
+
+live_events_accueil_admin_edit_concert:
+    path: /admin/{id}/edit/concert/
+    methods: [GET, POST]
+    controller: App\Controller\AccueilController::editConcert
+    requirements:
+        id: \d+
+
+live_events_accueil_admin_delete_concert:
+    path: /admin/delete/concert/
+    methods: [DELETE]
+    controller: App\Controller\AccueilController::delete
 
 live_events_Boutique:
     path: /boutique

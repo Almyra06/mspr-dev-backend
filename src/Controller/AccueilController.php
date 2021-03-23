@@ -3,63 +3,87 @@
 namespace App\Controller;
 
 use App\Repository\ConcertRepository;
+use App\Entity\Concert;
+use App\Form\ConcertType;
 use App\Repository\GroupeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AccueilController extends AbstractController
 {
 
-    public function index(ConcertRepository $concertRepo, GroupeRepository $groupeRepo): Response
+    public function index(ConcertRepository $concertRepo): Response
     {
         $em = $this->getDoctrine()->getManager();
-        //$programmes=$this->getprogramme();
         $concerts = $concertRepo->findall();
 
-        //dd($concerts);
         return $this->render('accueil/index.html.twig', [
             'controller_name' => 'AccueilController',
             'concerts' => $concerts,
         ]);
     }
-    private function getprogramme()
-    {
-        $programme = [
-            [
-                'id' => 1,
-                'date_debut' => '12/02/2021',
-                'horaire_debut' => '13h45',
-                'horaire_fin' => '15h15',
-                'duree' => '1h30',
-                'emplacement' => 'scene principale',
-                'group_id' => [
-                    'nom' => 'Jull'
-                ]
-            ],
-            [
-                'id' => 2,
-                'date_debut' => '12/02/2021',
-                'horraire_debut' => '13h45',
-                'horraire_fin' => '15h45',
-                'duree' => '2h',
-                'emplacement' => 'scene secondaire',
-                'group_id' => [
-                    'nom' => 'wenjdege'
-                ]
-            ],
-            [
-                'id' => 3,
-                'date_debut' => '12/02/2021',
-                'horraire_debut' => '15h15',
-                'horraire_fin' => '16h15',
-                'duree' => '1h',
-                'emplacement' => 'scene principale',
-                'group_id' => [
-                    'nom' => 'Yanakamoura'
-                ]
-            ]
-        ];
-        return $programme;
+    public function adminIndex(ConcertRepository $concertRepo): Response{
+        $em = $this->getDoctrine()->getManager();
+        $concerts = $concertRepo->findall();
+        //dd($concerts);
+        return $this->render('admin/index.html.twig', [
+            'controller_name' => 'AccueilController',
+            'concerts' => $concerts,
+        ]);
+
     }
+
+    public function newConcert(Request $request): Response
+    {
+        $concert = new Concert();
+        $form = $this->createForm(ConcertType::class, $concert);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($concert);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('live_events_accueil_admin');
+        }
+
+        return $this->render('admin/concert/new.html.twig', [
+            'concert' => $concert,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    public function editConcert(Request $request, Concert $concert): Response
+    {
+        $form = $this->createForm(ConcertType::class, $concert);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('live_events_accueil_admin');
+        }
+
+        return $this->render('admin/concert/edit.html.twig', [
+            'concert' => $concert,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    public function delete(Request $request, Concert $concert): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$concert->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($concert);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('live_events_accueil_admin');
+    }
+
+   
+
+    
 }

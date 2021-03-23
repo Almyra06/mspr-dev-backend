@@ -187,7 +187,7 @@ class __TwigTemplate_e81dbd8b31bc83ece23c600961402db64e00c02c6eec5515f106fd044b8
             echo "\t\t\t<tr>
 
 \t\t\t\t<td class=\"\\\"time\\\"\" rowspan=\"\\\"2\\\"\">
-\t\t\t\t\t<br/>";
+\t\t\t\t\t";
             // line 83
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["concert"], "horaireDebut", [], "any", false, false, false, 83), "H:i"), "html", null, true);
             echo "
@@ -340,7 +340,7 @@ class __TwigTemplate_e81dbd8b31bc83ece23c600961402db64e00c02c6eec5515f106fd044b8
 \t\t\t<tr>
 
 \t\t\t\t<td class=\"\\\"time\\\"\" rowspan=\"\\\"2\\\"\">
-\t\t\t\t\t<br/>{{ concert.horaireDebut|date('H:i')}}
+\t\t\t\t\t{{ concert.horaireDebut|date('H:i')}}
                     <br/>{{ concert.horaireFin|date('H:i')}}</td>
 
 \t\t\t\t<td>

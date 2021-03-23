@@ -18,11 +18,6 @@ class Concert
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $id_programme;
-
-    /**
      * @ORM\Column(type="time")
      */
     private $horaire_debut;
@@ -47,22 +42,15 @@ class Concert
      */
     private $groupe;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Programme::class, inversedBy="concert")
+     */
+    private $programme;
+
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getIdProgramme(): ?int
-    {
-        return $this->id_programme;
-    }
-
-    public function setIdProgramme(int $id_programme): self
-    {
-        $this->id_programme = $id_programme;
-
-        return $this;
     }
 
     public function getHoraireDebut(): ?\DateTimeInterface
@@ -121,6 +109,18 @@ class Concert
     public function setGroupe(?Groupe $groupe): self
     {
         $this->groupe = $groupe;
+
+        return $this;
+    }
+
+    public function getProgramme(): ?Programme
+    {
+        return $this->programme;
+    }
+
+    public function setProgramme(?Programme $programme): self
+    {
+        $this->programme = $programme;
 
         return $this;
     }
