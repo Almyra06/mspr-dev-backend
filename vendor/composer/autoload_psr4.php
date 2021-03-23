@@ -7,10 +7,15 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
+    'Symfony\\WebpackEncoreBundle\\' => array($vendorDir . '/symfony/webpack-encore-bundle/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Php73\\' => array($vendorDir . '/symfony/polyfill-php73'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Intl\\Normalizer\\' => array($vendorDir . '/symfony/polyfill-intl-normalizer'),
+<<<<<<< HEAD
+=======
+    'Symfony\\Polyfill\\Intl\\Idn\\' => array($vendorDir . '/symfony/polyfill-intl-idn'),
+>>>>>>> b01e1af37e1adb74ea6aa1198c055958489f6826
     'Symfony\\Polyfill\\Intl\\Icu\\' => array($vendorDir . '/symfony/polyfill-intl-icu'),
     'Symfony\\Polyfill\\Intl\\Grapheme\\' => array($vendorDir . '/symfony/polyfill-intl-grapheme'),
     'Symfony\\Flex\\' => array($vendorDir . '/symfony/flex/src'),
@@ -25,12 +30,27 @@ return array(
     'Symfony\\Component\\Validator\\' => array($vendorDir . '/symfony/validator'),
     'Symfony\\Component\\String\\' => array($vendorDir . '/symfony/string'),
     'Symfony\\Component\\Stopwatch\\' => array($vendorDir . '/symfony/stopwatch'),
+<<<<<<< HEAD
+=======
+    'Symfony\\Component\\Security\\Http\\' => array($vendorDir . '/symfony/security-http'),
+    'Symfony\\Component\\Security\\Guard\\' => array($vendorDir . '/symfony/security-guard'),
+>>>>>>> b01e1af37e1adb74ea6aa1198c055958489f6826
     'Symfony\\Component\\Security\\Csrf\\' => array($vendorDir . '/symfony/security-csrf'),
     'Symfony\\Component\\Security\\Core\\' => array($vendorDir . '/symfony/security-core'),
     'Symfony\\Component\\Routing\\' => array($vendorDir . '/symfony/routing'),
     'Symfony\\Component\\PropertyInfo\\' => array($vendorDir . '/symfony/property-info'),
     'Symfony\\Component\\PropertyAccess\\' => array($vendorDir . '/symfony/property-access'),
     'Symfony\\Component\\OptionsResolver\\' => array($vendorDir . '/symfony/options-resolver'),
+<<<<<<< HEAD
+=======
+    'Symfony\\Component\\Mime\\' => array($vendorDir . '/symfony/mime'),
+    'Symfony\\Component\\Messenger\\Bridge\\Redis\\' => array($vendorDir . '/symfony/redis-messenger'),
+    'Symfony\\Component\\Messenger\\Bridge\\Doctrine\\' => array($vendorDir . '/symfony/doctrine-messenger'),
+    'Symfony\\Component\\Messenger\\Bridge\\Amqp\\' => array($vendorDir . '/symfony/amqp-messenger'),
+    'Symfony\\Component\\Messenger\\' => array($vendorDir . '/symfony/messenger'),
+    'Symfony\\Component\\Mailer\\Bridge\\Google\\' => array($vendorDir . '/symfony/google-mailer'),
+    'Symfony\\Component\\Mailer\\' => array($vendorDir . '/symfony/mailer'),
+>>>>>>> b01e1af37e1adb74ea6aa1198c055958489f6826
     'Symfony\\Component\\Intl\\' => array($vendorDir . '/symfony/intl'),
     'Symfony\\Component\\HttpKernel\\' => array($vendorDir . '/symfony/http-kernel'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
@@ -47,11 +67,16 @@ return array(
     'Symfony\\Component\\Asset\\' => array($vendorDir . '/symfony/asset'),
     'Symfony\\Bundle\\WebProfilerBundle\\' => array($vendorDir . '/symfony/web-profiler-bundle'),
     'Symfony\\Bundle\\TwigBundle\\' => array($vendorDir . '/symfony/twig-bundle'),
+    'Symfony\\Bundle\\SecurityBundle\\' => array($vendorDir . '/symfony/security-bundle'),
     'Symfony\\Bundle\\MakerBundle\\' => array($vendorDir . '/symfony/maker-bundle/src'),
     'Symfony\\Bundle\\FrameworkBundle\\' => array($vendorDir . '/symfony/framework-bundle'),
     'Symfony\\Bridge\\Twig\\' => array($vendorDir . '/symfony/twig-bridge'),
     'Symfony\\Bridge\\Doctrine\\' => array($vendorDir . '/symfony/doctrine-bridge'),
+<<<<<<< HEAD
     'Sensio\\Bundle\\FrameworkExtraBundle\\' => array($vendorDir . '/sensio/framework-extra-bundle/src'),
+=======
+    'SymfonyCasts\\Bundle\\VerifyEmail\\' => array($vendorDir . '/symfonycasts/verify-email-bundle/src'),
+>>>>>>> b01e1af37e1adb74ea6aa1198c055958489f6826
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\EventDispatcher\\' => array($vendorDir . '/psr/event-dispatcher/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
@@ -62,6 +87,7 @@ return array(
     'Laminas\\ZendFrameworkBridge\\' => array($vendorDir . '/laminas/laminas-zendframework-bridge/src'),
     'Laminas\\EventManager\\' => array($vendorDir . '/laminas/laminas-eventmanager/src'),
     'Laminas\\Code\\' => array($vendorDir . '/laminas/laminas-code/src'),
+    'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/src'),
     'Doctrine\\SqlFormatter\\' => array($vendorDir . '/doctrine/sql-formatter/src'),
     'Doctrine\\Persistence\\' => array($vendorDir . '/doctrine/persistence/lib/Doctrine/Persistence'),
     'Doctrine\\ORM\\' => array($vendorDir . '/doctrine/orm/lib/Doctrine/ORM'),

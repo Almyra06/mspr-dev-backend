@@ -15,11 +15,19 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
+<<<<<<< HEAD
     'concert_index' => [[], ['_controller' => 'App\\Controller\\ConcertController::index'], [], [['text', '/concert/']], [], []],
     'concert_new' => [[], ['_controller' => 'App\\Controller\\ConcertController::new'], [], [['text', '/concert/new']], [], []],
     'concert_show' => [['id'], ['_controller' => 'App\\Controller\\ConcertController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/concert']], [], []],
     'concert_edit' => [['id'], ['_controller' => 'App\\Controller\\ConcertController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/concert']], [], []],
     'concert_delete' => [['id'], ['_controller' => 'App\\Controller\\ConcertController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/concert']], [], []],
+=======
+    'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], []],
+    'app_verify_email' => [[], ['_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], [], [['text', '/verify/email']], [], []],
+    'app_confirmation_email' => [[], ['_controller' => 'App\\Controller\\RegistrationController::confirmation'], [], [['text', '/register/confirmation']], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
+>>>>>>> b01e1af37e1adb74ea6aa1198c055958489f6826
     'live_events_accueil' => [[], ['_controller' => 'App\\Controller\\AccueilController::index'], [], [['text', '/']], [], []],
     'live_events_accueil_admin' => [[], ['_controller' => 'App\\Controller\\AccueilController::adminIndex'], [], [['text', '/admin/']], [], []],
     'live_events_accueil_admin_new_concert' => [[], ['_controller' => 'App\\Controller\\AccueilController::newConcert'], [], [['text', '/admin/add/concert/']], [], []],
