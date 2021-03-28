@@ -66,10 +66,10 @@ class Groupe extends \App\Entity\Groupe implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'styleMusique', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'concerts'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'styleMusique', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'concerts', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'slug'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'styleMusique', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'concerts'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'styleMusique', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'concerts', '' . "\0" . 'App\\Entity\\Groupe' . "\0" . 'slug'];
     }
 
     /**
@@ -179,6 +179,17 @@ class Groupe extends \App\Entity\Groupe implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+
+        return parent::__toString();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getId(): ?int
     {
         if ($this->__isInitialized__ === false) {
@@ -266,6 +277,17 @@ class Groupe extends \App\Entity\Groupe implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeConcert', [$concert]);
 
         return parent::removeConcert($concert);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSlug(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSlug', []);
+
+        return parent::getSlug();
     }
 
 }

@@ -3,7 +3,10 @@
 namespace App\Entity;
 
 use App\Repository\ConcertRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=ConcertRepository::class)
@@ -16,11 +19,6 @@ class Concert
      * @ORM\Column(type="integer")
      */
     private $id;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $id_programme;
 
     /**
      * @ORM\Column(type="time")
@@ -47,22 +45,30 @@ class Concert
      */
     private $groupe;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Programme::class, inversedBy="programme")
+     */
+    private $programme_id;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $name;
+
+    public function __construct()
+    {
+
+
+    }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getIdProgramme(): ?int
-    {
-        return $this->id_programme;
-    }
-
-    public function setIdProgramme(int $id_programme): self
-    {
-        $this->id_programme = $id_programme;
-
-        return $this;
     }
 
     public function getHoraireDebut(): ?\DateTimeInterface
@@ -113,6 +119,18 @@ class Concert
         return $this;
     }
 
+    public function getProgrammeId(): ?Programme
+    {
+        return $this->programme_id;
+    }
+
+    public function setProgrammeId(?Programme $programme_id): self
+    {
+        $this->programme_id = $programme_id;
+
+        return $this;
+    }
+
     public function getGroupe(): ?Groupe
     {
         return $this->groupe;
@@ -124,4 +142,18 @@ class Concert
 
         return $this;
     }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+//Tester des relations, groupe par exemple avec un recipe
 }

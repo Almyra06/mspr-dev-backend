@@ -7,11 +7,14 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
-
-// start the Stimulus application
 import './bootstrap';
 
 // Using jquery
-import $ from 'jquery';
+const $ = require('jquery');
+require('bootstrap');
+
+import * as _mdb from 'mdb-ui-kit'; // lib
+import { _Input } from 'mdb-ui-kit'; // module
+
+require('@fortawesome/fontawesome-free/css/all.min.css');
+require('@fortawesome/fontawesome-free/js/all.js');

@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '3cfff50395be743ee4c0d98145e9893b356b872e',
+    'reference' => 'eb93d6aa476eebf66ce24386f492c3a1edc3ac26',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,25 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '3cfff50395be743ee4c0d98145e9893b356b872e',
+      'reference' => 'eb93d6aa476eebf66ce24386f492c3a1edc3ac26',
+    ),
+    'antishov/doctrine-extensions-bundle' => 
+    array (
+      'pretty_version' => 'v1.4.3',
+      'version' => '1.4.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b036a8d62111c03f237a619b1840c46570f48483',
+    ),
+    'behat/transliterator' => 
+    array (
+      'pretty_version' => 'v1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -224,6 +242,15 @@ private static $installed = array (
       ),
       'reference' => '121af47c9aee9c03031bdeca3fac0540f59aa5c3',
     ),
+    'gedmo/doctrine-extensions' => 
+    array (
+      'pretty_version' => 'v3.0.3',
+      'version' => '3.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b4302ede2e247a6cc884b302a5f7146e08bd1b18',
+    ),
     'laminas/laminas-code' => 
     array (
       'pretty_version' => '3.4.1',
@@ -345,6 +372,22 @@ private static $installed = array (
         0 => '1.0',
       ),
     ),
+    'sensio/framework-extra-bundle' => 
+    array (
+      'pretty_version' => 'v6.1.1',
+      'version' => '6.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8ef75e99f20332f2725587896364f7079b53de95',
+    ),
+    'stof/doctrine-extensions-bundle' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v1.4.3',
+      ),
+    ),
     'symfony/amqp-messenger' => 
     array (
       'pretty_version' => 'v5.2.3',
@@ -353,6 +396,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'cf309a35ed08caa77886ee6a352b8491c7681424',
+    ),
+    'symfony/apache-pack' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3aa5818d73ad2551281fc58a75afd9ca82622e6c',
     ),
     'symfony/asset' => 
     array (
@@ -730,6 +782,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '7e68914bf35cda948ee4d9081b8eaed9fd783fe5',
+    ),
+    'symfony/requirements-checker' => 
+    array (
+      'pretty_version' => 'v2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e3d5565eb69a4a2195905c8669f32e988c8e6be0',
     ),
     'symfony/routing' => 
     array (

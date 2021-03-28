@@ -5,3 +5,4 @@ live_events_accueil:
 live_events_Boutique:
     path: /boutique
     controller: App\Controller\BoutiqueController::index
+

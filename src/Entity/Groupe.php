@@ -6,6 +6,7 @@ use App\Repository\GroupeRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=GroupeRepository::class)
@@ -34,9 +35,20 @@ class Groupe
      */
     private $concerts;
 
+    /**
+     * @Gedmo\Slug(fields={"nom"})
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
+    
     public function __construct()
     {
         $this->concerts = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->nom;
     }
 
     public function getId(): ?int
@@ -90,11 +102,18 @@ class Groupe
     {
         if ($this->concerts->removeElement($concert)) {
             // set the owning side to null (unless already changed)
-            if ($concert->getGroupe() === $this) {
-                $concert->setGroupe(null);
+            if ($concert->getConcerts() === $this) {
+                $concert->setConcerts(null);
             }
         }
 
         return $this;
     }
+
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
 }

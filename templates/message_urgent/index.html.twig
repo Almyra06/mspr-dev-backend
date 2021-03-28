@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MessageUrgentController!{% endblock %}
+
+{% block body %}
+
+<div class="container mt-3">
+    <h1>{{ message.message | upper }}
+    
+    {% if message.priorite == 1 %}
+        <i class="text-success" >*Consigne*</i>
+    {% elseif message.priorite == 2 %}
+        <i class="text-warning" >*À prendre en compte*</i>    
+    {% else %}
+        <i class="text-danger" >*Alerte!*</i>
+    {% endif %}
+
+    </h1>
+
+    <p>{{ message.description }}</p>
+</div>
+
+
+
+{% endblock %}

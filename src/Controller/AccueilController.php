@@ -2,64 +2,52 @@
 
 namespace App\Controller;
 
+use App\Entity\Concert;
+use App\Entity\MessageUrgent;
+use App\Form\SearchConcertType;
+use App\Form\SearchProgrammeType;
 use App\Repository\ConcertRepository;
 use App\Repository\GroupeRepository;
+use App\Repository\MessageRepository;
+use App\Repository\ProgrammeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AccueilController extends AbstractController
 {
 
-    public function index(ConcertRepository $concertRepo, GroupeRepository $groupeRepo): Response
-    {
-        $em = $this->getDoctrine()->getManager();
-        //$programmes=$this->getprogramme();
-        $concerts = $concertRepo->findall();
+    /**
+     * @Route("/", name="home")
+     */
 
-        //dd($concerts);
+    public function index(ConcertRepository $concertRepo, Request $request)
+    {
+        $form = $this->createForm(SearchConcertType::class);
+
+        $search = $form->handleRequest($request);
+
+        //$programmes=$this->getprogramme();
+        $concerts = $this->getDoctrine()->getRepository(Concert::class)->findAll();
+
+        $message = $this->getDoctrine()->getRepository(MessageUrgent::class)->findAll();
+
+        if($form->isSubmitted() && $form->isValid()){
+            //Recherche des annonces correpondant à l'id
+            $concert = $concertRepo->search(
+                $search->get('programme')->getData()
+            );
+        }else{
+            $concert = "";
+        }
+        
         return $this->render('accueil/index.html.twig', [
-            'controller_name' => 'AccueilController',
+            'concertsfiltre' => $concert,
             'concerts' => $concerts,
+            'messages' => $message,
+            'formFiltre' => $form->createView(),
         ]);
     }
-    private function getprogramme()
-    {
-        $programme = [
-            [
-                'id' => 1,
-                'date_debut' => '12/02/2021',
-                'horaire_debut' => '13h45',
-                'horaire_fin' => '15h15',
-                'duree' => '1h30',
-                'emplacement' => 'scene principale',
-                'group_id' => [
-                    'nom' => 'Jull'
-                ]
-            ],
-            [
-                'id' => 2,
-                'date_debut' => '12/02/2021',
-                'horraire_debut' => '13h45',
-                'horraire_fin' => '15h45',
-                'duree' => '2h',
-                'emplacement' => 'scene secondaire',
-                'group_id' => [
-                    'nom' => 'wenjdege'
-                ]
-            ],
-            [
-                'id' => 3,
-                'date_debut' => '12/02/2021',
-                'horraire_debut' => '15h15',
-                'horraire_fin' => '16h15',
-                'duree' => '1h',
-                'emplacement' => 'scene principale',
-                'group_id' => [
-                    'nom' => 'Yanakamoura'
-                ]
-            ]
-        ];
-        return $programme;
-    }
+
 }

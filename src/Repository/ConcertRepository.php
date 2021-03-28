@@ -19,6 +19,24 @@ class ConcertRepository extends ServiceEntityRepository
         parent::__construct($registry, Concert::class);
     }
 
+    /**
+     * Recherche en focntion des filtres
+     * @return void
+     */
+    public function search($data = null){
+
+        $query = $this->createQueryBuilder('p');
+
+        if($data != null){
+            
+            $query->leftJoin('p.programme_id', 'c');
+            $query->andWhere('c.id = :id')
+                  ->setParameter('id', $data);
+        }
+
+        return $query->getQuery()->getResult();
+    }
+
     // /**
     //  * @return Concert[] Returns an array of Concert objects
     //  */
