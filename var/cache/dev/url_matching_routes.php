@@ -22,6 +22,8 @@ return [
         '/admin/programme/ajout' => [[['_route' => 'admin_programme_ajout', '_controller' => 'App\\Controller\\Admin\\AdminController::ajoutProgramme'], null, null, null, false, false, null]],
         '/admin/concert/ajout' => [[['_route' => 'admin_concert_ajout', '_controller' => 'App\\Controller\\Admin\\AdminController::ajoutConcert'], null, null, null, false, false, null]],
         '/admin/groupe/ajout' => [[['_route' => 'admin_groupe_ajout', '_controller' => 'App\\Controller\\Admin\\AdminController::ajoutGroupe'], null, null, null, false, false, null]],
+        '/admin/faq' => [[['_route' => 'admin_faq', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::index'], null, null, null, false, false, null]],
+        '/faq' => [[['_route' => 'faq', '_controller' => 'App\\Controller\\FaqController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/register/confirmation' => [[['_route' => 'app_confirmation_email', '_controller' => 'App\\Controller\\RegistrationController::confirmation'], null, null, null, false, false, null]],
@@ -63,8 +65,16 @@ return [
                         .'|modifier/([^/]++)(*:397)'
                         .'|supprimer/([^/]++)(*:423)'
                     .')'
+                    .'|faq/(?'
+                        .'|repondre/([^/]++)(*:456)'
+                        .'|supprimer/([^/]++)(*:482)'
+                    .')'
                 .')'
-                .'|/message/([^/]++)(*:450)'
+                .'|/faq/(?'
+                    .'|repondre/([^/]++)(*:517)'
+                    .'|supprimer/([^/]++)(*:543)'
+                .')'
+                .'|/message/([^/]++)(*:569)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -83,7 +93,11 @@ return [
         361 => [[['_route' => 'admin_concert_suppression', '_controller' => 'App\\Controller\\Admin\\AdminController::supprimerConcert'], ['id'], null, null, false, true, null]],
         397 => [[['_route' => 'admin_groupe_modification', '_controller' => 'App\\Controller\\Admin\\AdminController::modifierGroupe'], ['id'], null, null, false, true, null]],
         423 => [[['_route' => 'admin_groupe_suppression', '_controller' => 'App\\Controller\\Admin\\AdminController::supprimerGroupe'], ['id'], null, null, false, true, null]],
-        450 => [
+        456 => [[['_route' => 'admin_faq_repondre', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::faqRepondre'], ['id'], null, null, false, true, null]],
+        482 => [[['_route' => 'admin_faq_suppression', '_controller' => 'App\\Controller\\Admin\\AdminFaqController::supprimerMessage'], ['id'], null, null, false, true, null]],
+        517 => [[['_route' => 'faq_repondre', '_controller' => 'App\\Controller\\FaqController::faqRepondre'], ['id'], null, null, false, true, null]],
+        543 => [[['_route' => 'faq_suppression', '_controller' => 'App\\Controller\\FaqController::supprimerMessage'], ['id'], null, null, false, true, null]],
+        569 => [
             [['_route' => 'message_urgent', '_controller' => 'App\\Controller\\MessageUrgentController::index'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

@@ -53,7 +53,7 @@ class Programme
     private $slug;
 
     /**
-     * @ORM\OneToMany(targetEntity=Concert::class, mappedBy="programme_id", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Concert::class, mappedBy="programme_id")
      */
     private $programme;
 

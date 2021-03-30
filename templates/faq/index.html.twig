@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FAQ LiveEvents{% endblock %}
+
+{% block body %}
+<h1 class = "mt-4 mb-2">FAQ DE LIVE EVENTS !</h1>
+<i>Posez vos questions ! :)</i>
+
+{{ form(formQuestions) }}
+
+
+<table class="table mb-4">
+  <thead class="thead-light">
+    <tr>
+	    <th scope="col">Questions</th>
+      <th scope="col">Réponses</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for reponse in reponses %}
+
+    <tr> 
+        <td>
+          <p>{{ reponse.question.question }}</p>
+        </td>
+        <td>{{ reponse.reponse }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FAQ LiveEvents{% endblock %}
+
+{% block body %}
+<h1 class = "mt-4 mb-2">FAQ DE LIVE EVENTS !</h1>
+<h3>Interface de gestion des questions : </h3>
+
+{{ form(formQuestions) }}
+
+
+<table class="table mb-4">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+	    <th scope="col">Questions</th>
+      <th scope="col">Réponses</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for reponse in reponses %}
+
+    <tr> 
+        <td>{{ reponse.question.id }}</td>
+        <td>
+          <p>{{ reponse.question.question }}</p>
+        </td>
+        <td>{{ reponse.reponse }}</td>
+        <td>
+            <a class="btn btn-primary" href="{{ path('faq_repondre', {id: reponse.question.id}) }}">Répondre</a>
+            <a class="btn btn-danger" href="{{ path('faq_suppression', {id: reponse.question.id}) }}">Supprimer</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
