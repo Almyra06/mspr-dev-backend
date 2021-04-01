@@ -346,11 +346,25 @@
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\FaqController"/>
       </call>
     </service>
+    <service id="App\Controller\MentionsLegalesController" class="App\Controller\MentionsLegalesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\MentionsLegalesController"/>
+      </call>
+    </service>
     <service id="App\Controller\MessageUrgentController" class="App\Controller\MessageUrgentController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\MessageUrgentController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PartenairesController" class="App\Controller\PartenairesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\PartenairesController"/>
       </call>
     </service>
     <service id="App\Controller\RegistrationController" class="App\Controller\RegistrationController" public="true" autowire="true" autoconfigure="true">
@@ -359,6 +373,13 @@
       <argument type="service" id="App\Security\EmailVerifier"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\RegistrationController"/>
+      </call>
+    </service>
+    <service id="App\Controller\ReseauxController" class="App\Controller\ReseauxController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\ReseauxController"/>
       </call>
     </service>
     <service id="App\Controller\SecurityController" class="App\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
@@ -4505,12 +4526,21 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FaqController" class="App\Controller\FaqController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FaqController" class="App\Controller\FaqController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\FaqController" class="App\Controller\FaqController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MentionsLegalesController" class="App\Controller\MentionsLegalesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MentionsLegalesController" class="App\Controller\MentionsLegalesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\MentionsLegalesController" class="App\Controller\MentionsLegalesController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MessageUrgentController" class="App\Controller\MessageUrgentController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MessageUrgentController" class="App\Controller\MessageUrgentController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\MessageUrgentController" class="App\Controller\MessageUrgentController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PartenairesController" class="App\Controller\PartenairesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PartenairesController" class="App\Controller\PartenairesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PartenairesController" class="App\Controller\PartenairesController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ReseauxController" class="App\Controller\ReseauxController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ReseauxController" class="App\Controller\ReseauxController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ReseauxController" class="App\Controller\ReseauxController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5114,15 +5144,33 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\MentionsLegalesController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\MentionsLegalesController"/>
+      <argument>App\Controller\MentionsLegalesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
     <service id=".service_locator.5nX7ca3.App\Controller\MessageUrgentController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\MessageUrgentController"/>
       <argument>App\Controller\MessageUrgentController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\PartenairesController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PartenairesController"/>
+      <argument>App\Controller\PartenairesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
     <service id=".service_locator.5nX7ca3.App\Controller\RegistrationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\RegistrationController"/>
       <argument>App\Controller\RegistrationController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\ReseauxController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ReseauxController"/>
+      <argument>App\Controller\ReseauxController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>

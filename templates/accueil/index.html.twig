@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!
+{% block title %}Acceuil - Live Events
 {% endblock %}
 
 {% block stylesheets %}
@@ -113,12 +113,12 @@
             </div>
         </div>
 
-	<h1>Bienvenue au Festival LiveEvents</h1>
-
+	<h1 class="mt-3 mb-4">Bienvenue au festival Nation Sounds!</h1>
+<div class="container">
 	Retrouvez vos artistes préféré en live
 	<br/><br/>
 	
-	<label>Selectionnez un programme : </label>
+	<h4>Selectionnez un programme : </h4>
 	{{ form(formFiltre) }}
 
 
@@ -160,12 +160,15 @@
 </table>
 
 	<br/><br/>
-	<h3>ici ce placera le lien vers la boutique</h3>
-	<a href="{{ path('live_events_Boutique') }}" class="btn btn-primary-outline sensitive">
-		Aller à la boutique
+    <div class="text-center">
+	<h3>Accéder à la billeterie</h3>
+    
+	<a href="https://www.billetweb.fr/nation-sounds1" class="btn btn-primary btn-lg sensitive">
+		BILLETERIE
 	</a>
+    </div>
 	<br/><br/>
-	<h3>ici ce placera la map interactive</h3>
+	<h3>Retrouvez tout nos stands sur notre map !</h3>
 	<iframe src="https://www.google.com/maps/d/embed?mid=1YOhzjaL2tNn8QyeHFogBDwSxJG0pR64H" width="640" height="480"></iframe>
-
+</div>
 {% endblock %}

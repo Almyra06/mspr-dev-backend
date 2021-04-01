@@ -21,7 +21,7 @@ class SearchConcertType extends AbstractType
                 
                 'class' => Programme::class,
                 'choice_label' => 'name',//LE PROBLEME
-                'placeholder' => '-- TOUS LES CONCERTS --',
+                'placeholder' => '-- TOUS LES PROGRAMMES --',
                 'label' => false,
                 'attr' => [
                     'class' => 'form-control',
@@ -32,6 +32,7 @@ class SearchConcertType extends AbstractType
             ])
 
             ->add('Valider', SubmitType::class, [
+                'label' => 'Rechercher',
                 'attr' => [
                     'class' => 'btn btn-primary',
                 ]

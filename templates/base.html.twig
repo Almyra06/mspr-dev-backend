@@ -2,10 +2,10 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Base{% endblock %}</title>
         {{ encore_entry_link_tags('app') }}
         {% block stylesheets %}
-
+            <link rel="stylesheet" href="{{ asset('assets/styles/app.css') }}" type="text/css"/>
         {% endblock %}
             <!-- Font Awesome -->
             <link
@@ -17,29 +17,48 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
             rel="stylesheet"
             />
+            <link
+            href="assets/styles/app.css"
+            rel="stylesheet"
+            />
     </head>
         <body>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Navbar</a>
+
+                <a class="navbar-brand" href="#">Live Events</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="fas fa-bars fa-1x"></span>
                 </button>
+                    
                 <div class="collapse navbar-collapse" id="navbarNav">
+
                     <ul class="navbar-nav">
+
+
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Informations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="#">Réseaux sociaux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Partenaires</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path("app_login") }}">Se connecter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path("app_register") }}">S'enregistrer</a>
                     </li>
                     </ul>
                 </div>
+
             </nav>
 
         
