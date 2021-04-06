@@ -1,8 +1,0 @@
-live_events_accueil:
-    path: /
-    controller: App\Controller\AccueilController::index
-
-live_events_Boutique:
-    path: /boutique
-    controller: App\Controller\BoutiqueController::index
-
