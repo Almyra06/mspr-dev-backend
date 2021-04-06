@@ -1,15 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!
-{% endblock %}
-
-{% block stylesheets %}
+{% block title %}Interface d'administration
 {% endblock %}
 
 {% block body %}
 <div class="container">
 
 <h1 class="mt-5 mb-5">Interface administrateur </h1>
+
+<h4 class="mt-4 mb-4">Gestion de la FAQ 
+<a class="btn btn-primary btn-sm" href="{{ path('admin_faq') }}"><i class="fas fa-lg fa-cog"></i>Gérer</a>
+</h4>
 
 <h4 class="mt-4 mb-4">Gestion des messages 
 <a class="btn btn-success ml-5" href="{{ path('admin_message_ajout') }}">Ajouter</a>
@@ -19,7 +20,7 @@
 <i>Veuillez limiter les messages à 3 à la fois max !</i>
   
 
-        <div class="container-fluid bg-danger">
+        <div class="w-auto linear-gradient">
             <div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">
                 <div class="carousel-indicators mb-0 mt-3">
                     {% set isFirst = true %}
@@ -58,7 +59,7 @@
                     <div class="carousel-item active">
                     {% set isFirst = true %}
 							<a href="{{ path("message_urgent", {id: message.id}) }}">
-                            <div class="carousel-caption d-none d-md-block position-static nopadding">
+                            <div class="carousel-caption d-md-block position-static nopadding">
                                 <h2>{{ message.message | upper  }}</h2>
                             </div>
                         </a>
@@ -68,7 +69,7 @@
 
                     <div class="carousel-item">
 							<a href="{{ path("message_urgent", {id: message.id}) }}">
-                            <div class="carousel-caption d-none d-md-block position-static nopadding">
+                            <div class="carousel-caption d-md-block position-static nopadding">
                                 <h2>{{ message.message | upper  }}</h2>
                             </div>
                         </a>
@@ -82,7 +83,7 @@
 
             </div>
         </div>
-
+<div class="table-responsive-sm">
 <table class="table mb-4">
   <thead class="thead-light">
     <tr>
@@ -109,11 +110,13 @@
     {% endfor %}
   </tbody>
 </table>
+</div>
 
 <h4 class="mt-4 mb-4">Gestion des programmes
   <a class="btn btn-success ml-5" href="{{ path('admin_programme_ajout') }}">Ajouter</a>
 </h4>
 
+<div class="table-responsive-sm">
 <table class="table mb-4">
   <thead class="thead-light">
     <tr>
@@ -141,10 +144,13 @@
     {% endfor %}
   </tbody>
 </table>
+</div>
 
 <h4 class="mt-4 mb-4">Gestion des concerts
   <a class="btn btn-success ml-5" href="{{ path('admin_concert_ajout') }}">Ajouter</a>
 </h4>
+
+<div class="table-responsive-sm">
 <table class="table mb-4">
   <thead class="thead-light">
     <tr>
@@ -183,10 +189,13 @@
 
   </tbody>
 </table>
+</div>
 
 <h4 class="mt-4 mb-4">Gestion des groupes
   <a class="btn btn-success ml-5" href="{{ path('admin_groupe_ajout') }}">Ajouter</a>
 </h4>
+
+<div class="table-responsive-sm">
 <table class="table mb-4">
   <thead class="thead-light">
     <tr>
@@ -219,6 +228,7 @@
 
   </tbody>
 </table>
+</div>
 
 </div>
 		

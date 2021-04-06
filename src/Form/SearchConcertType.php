@@ -34,7 +34,7 @@ class SearchConcertType extends AbstractType
             ->add('Valider', SubmitType::class, [
                 'label' => 'Rechercher',
                 'attr' => [
-                    'class' => 'btn btn-primary',
+                    'class' => 'btn btn-primary btn-lg mt-3 linear-gradient',
                 ]
             ])
         ;

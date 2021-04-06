@@ -3,55 +3,41 @@
 {% block title %}Acceuil - Live Events
 {% endblock %}
 
-{% block stylesheets %}
-{% endblock %}
-
 {% block body %}
-	<style type="text/css">
-		caption/* Titre du tableau */
-		{
-			margin: auto auto 20px; /* Centre le titre du tableau */
-			font-family: Arial, Times, "Times New Roman", serif;
-			font-weight: bold;
-			font-size: 1.2em;
-			color: #009900; /* Pour éviter que le titre ne soit trop collé au tableau en-dessous */
-		}
 
-		table/* Le tableau en lui-même */
-		{
-			margin: auto; /* Centre le tableau */
-			border: 4px outset green; /* Bordure du tableau avec effet 3D (outset) */
-			border-collapse: collapse; /* Colle les bordures entre elles */
-			width: 100%;
-		}
-		th/* Les cellules d'en-tête */
-		{
-			background-color: #006600;
-			color: white;
-			font-size: 1.1em;
-			font-family: Arial, "Arial Black", Times, "Times New Roman", serif;
-			border: 1px solid red;
-		}
+        <div class="w-auto linear-gradient">
+            <div id="carouselExampleCaptions" class="slide" data-mdb-ride="carousel">
+                <div class="carousel-inner">
+                {% set isFirst = true %}
+                {% set i = 0 %}
+                {% for message in messages | sort((a, b) => b.priorite <=> a.priorite) | slice(0, 3) %}   
+                {% if isFirst == true %}
 
-		td/* Les cellules normales */
-		{
-			font-size: 0.8em;
-			border: 1px solid black;
-			font-family: Verdana, "Trebuchet MS", Times, "Times New Roman", serif;
-			text-align: center; /* Tous les textes des cellules seront centrés*/
-			padding: 5px; /* Petite marge intérieure aux cellules pour éviter que le texte touche les bordures */
-			height: 25px;
-			width: 200px;
-		}
-		td.time {
-			font-size: 1em;
-			height: 50px;
-			width: 100px;
-		}
-	</style>
-        <div class="container-fluid bg-danger">
-            <div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">
-                <div class="carousel-indicators mb-0 mt-3">
+                    <div class="carousel-item active">
+                    {% set isFirst = true %}
+							<a href="{{ path("message_urgent", {id: message.id}) }}">
+                            <div class="carousel-caption d-md-block position-static nopadding">
+                                <h2>{{ message.message | upper  }}</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                {% else %}
+
+                    <div class="carousel-item">
+							<a href="{{ path("message_urgent", {id: message.id}) }}">
+                            <div class="carousel-caption d-md-block position-static nopadding">
+                                <h2>{{ message.message | upper  }}</h2>
+                            </div>
+                        </a>
+                    </div>
+                
+                {% endif %}
+                {% set isFirst = false %}
+                {% endfor %}
+
+                </div>
+                <div class="carousel-indicators d-md-block position-static text-center">
                     {% set isFirst = true %}
                     {% for message in messages | sort((a, b) => b.priorite <=> a.priorite) | slice(0, 3) %} 
                     {% if isFirst == true %}
@@ -79,55 +65,36 @@
                     {% set isFirst = false %}
                     {% endfor %}
                 </div>
-                <div class="carousel-inner">
-                {% set isFirst = true %}
-                {% set i = 0 %}
-                {% for message in messages | sort((a, b) => b.priorite <=> a.priorite) | slice(0, 3) %}   
-                {% if isFirst == true %}
 
-                    <div class="carousel-item active">
-                    {% set isFirst = true %}
-							<a href="{{ path("message_urgent", {id: message.id}) }}">
-                            <div class="carousel-caption d-none d-md-block position-static nopadding">
-                                <h2>{{ message.message | upper  }}</h2>
-                            </div>
-                        </a>
-                    </div>
-
-                {% else %}
-
-                    <div class="carousel-item">
-							<a href="{{ path("message_urgent", {id: message.id}) }}">
-                            <div class="carousel-caption d-none d-md-block position-static nopadding">
-                                <h2>{{ message.message | upper  }}</h2>
-                            </div>
-                        </a>
-                    </div>
-                
-                {% endif %}
-                {% set isFirst = false %}
-                {% endfor %}
-
-                </div>
 
             </div>
         </div>
 
-	<h1 class="mt-3 mb-4">Bienvenue au festival Nation Sounds!</h1>
+	<h1 class="mt-3 mb-4 text-center titre">Bienvenue au festival Nation Sounds!</h1>
+    <div class="brand2 mx-auto"></div>
 <div class="container">
-	Retrouvez vos artistes préféré en live
+</br>
+	<div class="text-center font-weight-bold"><i>Retrouvez vos artistes préféré en live</i></div>
 	<br/><br/>
 	
-	<h4>Selectionnez un programme : </h4>
-	{{ form(formFiltre) }}
+	<h4 class="titre">Selectionnez un programme : </h4>
+	{{ form_start(formFiltre) }}
+
+        {{ form_row(formFiltre.programme) }}
+
+    <div class="text-center">
+        {{ form_row(formFiltre.Valider) }}
+    </div>
+        
+
+    {{ form_end(formFiltre) }}
 
 
-
-<h4 class="mt-4 mb-4">Les concerts : </h4>
+<h4 class="mt-4 mb-4 titre">Les concerts : </h4>
+<div class="table-responsive-sm">
 <table class="table mb-4">
   <thead class="thead-light">
     <tr>
-      <th scope="col">#</th>
 	  <th scope="col">Programme</th>
 	  <th scope="col">Date</th>
       <th scope="col">Groupe</th>
@@ -141,7 +108,6 @@
     {% for concert in concertsfiltre %}
 
     <tr>
-      <th scope="row">{{ concert.id }}</th>
       <td>{{ concert.programmeid.name}}</td>
 	  <td>{{ concert.programmeid.date|date('d-m-Y') }}</td>
       <td>{{ concert.groupe.nom}}</td>
@@ -158,17 +124,20 @@
     {% endfor %}
 
 </table>
+</div>
 
 	<br/><br/>
-    <div class="text-center">
+    <div class="text-center titre">
 	<h3>Accéder à la billeterie</h3>
     
-	<a href="https://www.billetweb.fr/nation-sounds1" class="btn btn-primary btn-lg sensitive">
+	<a href="https://www.billetweb.fr/nation-sounds1" class="btn btn-primary btn-lg sensitive linear-gradient">
 		BILLETERIE
 	</a>
     </div>
 	<br/><br/>
-	<h3>Retrouvez tout nos stands sur notre map !</h3>
+	<h3 class="titre">Retrouvez tout nos stands sur notre map !</h3>
+    <div class="map-responsive">
 	<iframe src="https://www.google.com/maps/d/embed?mid=1YOhzjaL2tNn8QyeHFogBDwSxJG0pR64H" width="640" height="480"></iframe>
+    </div>
 </div>
 {% endblock %}

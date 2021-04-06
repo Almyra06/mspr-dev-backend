@@ -17,7 +17,7 @@ class QuestionType extends AbstractType
             ->add('question', TextType::class)
             ->add('Demander', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-primary',
+                    'class' => 'btn btn-primary btn-lg mt-3 linear-gradient',
                 ]
             ])
         ;

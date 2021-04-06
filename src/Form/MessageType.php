@@ -27,7 +27,7 @@ class MessageType extends AbstractType
             ])
             ->add('Valider', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-primary',
+                    'class' => 'btn btn-primary btn-lg mt-3 linear-gradient',
                 ]
             ])
         ;
