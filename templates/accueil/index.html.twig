@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil - Live Events
+{% block title %}Accueil - Live Events
 {% endblock %}
 
 {% block body %}
 
         <div class="w-auto linear-gradient">
             <div id="carouselExampleCaptions" class="slide" data-mdb-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner pt-4">
                 {% set isFirst = true %}
                 {% set i = 0 %}
                 {% for message in messages | sort((a, b) => b.priorite <=> a.priorite) | slice(0, 3) %}   
@@ -72,11 +72,11 @@
 
 	<h1 class="mt-3 mb-4 text-center titre">Bienvenue au festival Nation Sounds!</h1>
     <div class="brand2 mx-auto"></div>
-<div class="container">
+
 </br>
 	<div class="text-center font-weight-bold"><i>Retrouvez vos artistes préféré en live</i></div>
 	<br/><br/>
-	
+	<div class="container bg-vert pt-3 pb-4">
 	<h4 class="titre">Selectionnez un programme : </h4>
 	{{ form_start(formFiltre) }}
 
@@ -91,40 +91,54 @@
 
 
 <h4 class="mt-4 mb-4 titre">Les concerts : </h4>
-<div class="table-responsive-sm">
-<table class="table mb-4">
-  <thead class="thead-light">
-    <tr>
-	  <th scope="col">Programme</th>
-	  <th scope="col">Date</th>
-      <th scope="col">Groupe</th>
-      <th scope="col">Horaires</th>
-      <th scope="col">Durée</th>
-      <th scope="col">Lieu</th>
-	  
-    </tr>
-  </thead>
-  <tbody>
-    {% for concert in concertsfiltre %}
 
-    <tr>
-      <td>{{ concert.programmeid.name}}</td>
-	  <td>{{ concert.programmeid.date|date('d-m-Y') }}</td>
-      <td>{{ concert.groupe.nom}}</td>
-      <td>
-	  {{ concert.horairedebut|date('H:i:s') }}
-      {{ concert.horairefin|date('H:i:s') }}
-	  </td>
-      <td>{{ concert.duree }}</td>
-      <td>{{ concert.emplacement }}</td>
-	  
-      
+{% for concert in concertsfiltre %}
+    {% set i = i + 1 %}
+    {% if i % 2 == 1 %}
+    <div class="row mb-3">
+        <div class="col nopadding">
+            <img class="imgprogramme" src="{{ concert.programmeid.img }}"/>
+        </div>
+        
+        <div class="col nopadding">
+        <h1 class="titre">{{ concert.programmeid.name}}</h1>
+        <h2 class="text-light">{{ concert.programmeid.date|date('d-m-Y') }}</h2>
+        <h3 class="text-light">{{ concert.groupe.nom}}</h3>
+        <p class="text-light bg-vert-clair">
+        {{ concert.horairedebut|date('H:i:s') }} - {{ concert.horairefin|date('H:i:s') }}
+        {{ concert.emplacement }}
+        </p>
+        </div>
 
-    </tr>
-    {% endfor %}
+        
+        
+    </div>
+    <hr>
+    
+    {% else %}
 
-</table>
-</div>
+    <div class="row mb-3">
+        
+        <div class="col nopadding">
+        <h1 class="titre">{{ concert.programmeid.name}}</h1>
+        <h2 class="text-light">{{ concert.programmeid.date|date('d-m-Y') }}</h2>
+        <h3 class="text-light">{{ concert.groupe.nom}}</h3>
+        <p class="text-light bg-vert-clair">
+        {{ concert.horairedebut|date('H:i:s') }} - {{ concert.horairefin|date('H:i:s') }}
+        {{ concert.emplacement }}</p>
+        </div>
+
+        <div class="col nopadding">
+            <img class="imgprogramme" src="{{ concert.programmeid.img }}"/>
+        </div>
+        
+    </div>
+    <hr>
+
+    {% endif %}
+
+{% endfor %}
+
 
 	<br/><br/>
     <div class="text-center titre">

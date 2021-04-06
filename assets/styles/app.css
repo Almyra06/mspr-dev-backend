@@ -53,3 +53,23 @@
 .titre {
     color:#e9c46a;
 }
+
+.titre2{
+    color:#e76f51;
+}
+
+.imgprogramme{
+    width: 180px;
+}
+
+.bg-vert{
+    background-color: #264653;
+}
+
+.bg-vert-clair{
+    background-color: #2a9d8f;
+}
+
+.nopadding {
+    padding: 0 !important;
+}

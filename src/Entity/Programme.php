@@ -63,6 +63,11 @@ class Programme
      */
     private $end;
 
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
+    private $img;
+
 
     public function __construct()
     {
@@ -183,6 +188,18 @@ class Programme
                 $concert->setConcerts(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImg(): ?string
+    {
+        return $this->img;
+    }
+
+    public function setImg(?string $img): self
+    {
+        $this->img = $img;
 
         return $this;
     }
